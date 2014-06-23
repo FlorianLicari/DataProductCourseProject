@@ -48,7 +48,7 @@ text(2,max(y)*0.6,paste("dnorm = ",
 
 ## Central Normal Distribution Example: Plot
 
-<img src="assets/fig/central normal distribution.png" title="plot of chunk central normal distribution" alt="plot of chunk central normal distribution" style="display: block; margin: auto;" />
+<img src="figure/central normal distribution.png" title="plot of chunk central normal distribution" alt="plot of chunk central normal distribution" style="display: block; margin: auto;" />
 
 --- .class #id 
 
