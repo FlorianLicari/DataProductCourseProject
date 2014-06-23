@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products">
+  <meta name="author" content="Florian Licari">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products</h1>
+    <h2>Course Project Presentation</h2>
+    <p>Florian Licari<br/>Student at Ecole Centrale de Lyon</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Context</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br>
+If you have follow all courses of the Data Science Specializiation, you probably realise to what extent <b>Central Normal Distribution</b> and <b>Central T-Student Distribution</b> were important.</p>
+
+<p>Especially, quantile were often calculted in order to answer quizz questions or to make our course project.</p>
+
+<p>The goal of my shiny app application is precisely to calculate quantiles:</p>
+
+<ul>
+<li><b>Faster</b></li>
+<li><b>Simplier</b></li>
+<li><b>Enjoyable</b></li>
+</ul>
+
+<p><font size="+4"><b>This is a revolution!</font></b></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Central Normal Distribution Example: Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">x &lt;- seq(-4,4,0.001); y &lt;- dnorm(x); q &lt;- 0.95; x1 &lt;- qnorm(q); y1 &lt;- dnorm(qnorm(q))
+plot(x,y,type=&quot;l&quot;,lwd=2)
+lines(c(x1,x1),c(0,y1),col=&quot;red&quot;,lwd=2,lty=2)
+lines(c(0-1*4,x1),c(y1,y1),col=&quot;red&quot;,lwd=2,lty=2)
+points(x1,y1,col=&quot;red&quot;,pch=19)
+text(2,max(y),paste(&quot;Mean = &quot;,0),pos=4)
+text(2,max(y)*0.9,paste(&quot;Sd = &quot;,1),pos=4)
+text(2,max(y)*0.8,paste(&quot;pnorm = &quot;,
+                        round(pnorm(q)),3),pos=4)
+text(2,max(y)*0.7,paste(&quot;qnorm = &quot;,
+                        round(x1,3)),pos=4)
+text(2,max(y)*0.6,paste(&quot;dnorm = &quot;,
+                        round(y1,3)),pos=4)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Central Normal Distribution Example: Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/central normal distribution.png" title="plot of chunk central normal distribution" alt="plot of chunk central normal distribution" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Screenshot of the shiny application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://florianlicari.shinyapps.io/CourseProjectApp/"> Link to the app </a></p>
+
+<p><img src="./figure/screenshot.png" height="600" width="800" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Context'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Central Normal Distribution Example: Code'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Central Normal Distribution Example: Plot'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Screenshot of the shiny application'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
