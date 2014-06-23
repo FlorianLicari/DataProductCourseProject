@@ -25,6 +25,14 @@ The goal of my shiny app application is precisely to calculate quantiles:
 
 --- .class #id 
 
+## Screenshot of the shiny application
+
+<a href="https://florianlicari.shinyapps.io/CourseProjectApp/"> Link to the app </a>
+
+<img src="./figure/screenshot.png" height="600" width="800" />
+
+--- .class #id 
+
 ## Central Normal Distribution Example: Code
 
 
@@ -50,10 +58,5 @@ text(2,max(y)*0.6,paste("dnorm = ",
 
 <img src="figure/central normal distribution.png" title="plot of chunk central normal distribution" alt="plot of chunk central normal distribution" style="display: block; margin: auto;" />
 
---- .class #id 
 
-## Screenshot of the shiny application
 
-<a href="https://florianlicari.shinyapps.io/CourseProjectApp/"> Link to the app </a>
-
-<img src="./figure/screenshot.png" height="600" width="800" />
